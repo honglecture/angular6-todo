@@ -1,0 +1,13 @@
+/* #todolist > ul >li {
+    border: 1px solid black;
+    padding: 12px 20px;
+    margin-top: 5px;
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+#todolist > ul >li  button{
+    margin:0px 5px;
+} */

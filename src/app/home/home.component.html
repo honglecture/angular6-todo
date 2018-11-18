@@ -1,0 +1,12 @@
+<app-header></app-header>
+  <a routerLink="/todo" >todo로 가자</a>
+  <div *ngIf="authCheck(); then thenBlock else elseBlock"></div>
+  <ng-template #thenBlock>
+    <a (click)="logout()">로그아웃!</a>
+    <a routerLink="/member/profile">프로필</a>
+  </ng-template>
+  <ng-template #elseBlock>
+    <a routerLink="/member" >member로 가자</a>
+  </ng-template>
+  {{id}}
+<app-footer></app-footer>

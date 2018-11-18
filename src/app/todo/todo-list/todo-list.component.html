@@ -1,0 +1,20 @@
+<app-todo-list-insert (insertTodo)="insert($event)"></app-todo-list-insert>
+<button class="button button-lg" (click)="completeAll()" >모두 완료</button>
+<section id="todolist" class="content-margin">
+  <h1 class="hidden">todolist</h1>
+  <ul class="jejugothic">
+    <li *ngFor="let todo of todos" > 
+      <app-todo-list-item [todo]="todo"
+      (deleteTodo)="delete($event)"
+      (complateTodo)="complete($event)"
+      (updateTodo)="update($event)"
+      ></app-todo-list-item>
+        <!-- <a routerLink="../detail/{{todo.id}}"><span>{{todo.content}}</span></a>
+        <span class="button-group">
+          <button class="button button-nm">수정</button>
+          <button class="button button-nm" (click)="complete(todo)">완료</button>
+          <button class="button button-nm" (click)="delete(todo)">삭제</button>
+        </span> -->
+    </li>
+  </ul>
+</section>

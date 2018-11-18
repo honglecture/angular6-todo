@@ -1,0 +1,10 @@
+<section>
+  <form>
+    <ul>
+      <li><label>ID : </label><input [(ngModel)]="member.id" type="text" name="id"></li>
+      <li><label>PASSWORD : </label><input [(ngModel)]="member.password" type="password" name="password"></li>
+      <li><label>NICKNAME : </label><input [(ngModel)]="member.nickname" type="text" name="nickname"></li>
+    </ul>
+    <button type="button" (click)="join()">가입!!</button>
+  </form>
+</section>

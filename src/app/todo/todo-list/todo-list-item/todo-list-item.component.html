@@ -1,0 +1,22 @@
+
+<div *ngIf="status === 'normal'; then normalBlock else editBlock"></div>
+  <ng-template #normalBlock>
+    <li [ngClass]="{complate: todo.isCompleted}">
+    <a routerLink="../detail/{{todo.id}}"><span>{{todo.content}}</span></a>
+    <span class="button-group">
+      <button class="button button-nm" (click)="editForm()">수정</button>
+      <button class="button button-nm" (click)="complate()">완료</button>
+      <button class="button button-nm" (click)="delete()">삭제</button>
+    </span>
+  </li>
+  </ng-template>
+
+  <ng-template #editBlock>
+    <li [ngClass]="{complate: todo.isCompleted}">
+      <input type="text" name="content" [(ngModel)]="content" [value]="todo.content"> 
+      <span class="button-group">
+        <button class="button button-nm" (click)="update()">저장</button>
+        <button class="button button-nm" (click)="cancel()">취소</button>
+      </span>
+    </li>
+  </ng-template>
